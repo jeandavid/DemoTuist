@@ -1,8 +1,12 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let project = Project(
     name: "FrameworkB",
-    options: .options(automaticSchemesOptions: .disabled),
+    options: .options(
+        automaticSchemesOptions: .disabled
+    ),
+    settings: .settings(configurations: Configuration.myConfigurations),
     targets: [
         Target(
             name: "FrameworkB",
