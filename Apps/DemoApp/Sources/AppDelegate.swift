@@ -1,6 +1,7 @@
 import UIKit
 import FrameworkA
 import FrameworkB
+import Alamofire
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
