@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let infoPlist: [String: InfoPlist.Value] = [
     "CFBundleShortVersionString": "1.0",
@@ -10,6 +11,10 @@ let infoPlist: [String: InfoPlist.Value] = [
 let project = Project(
     name: "DemoApp",
     organizationName: "some.org",
+    options: .options(
+        automaticSchemesOptions: .disabled
+    ),
+    settings: .settings(configurations: Configuration.myConfigurations),
     targets: [
         Target(
             name: "DemoApp",
@@ -25,5 +30,14 @@ let project = Project(
                 .project(target: "FrameworkB", path: .relativeToRoot("Modules/FrameworkB"))
             ]
         )
+    ],
+    schemes: [
+        Scheme(
+            name: "Prod",
+            runAction: .runAction(
+                configuration: .prod,
+                executable: .project(path: ".", target: "DemoApp")
+            )
+        ),
     ]
 )
