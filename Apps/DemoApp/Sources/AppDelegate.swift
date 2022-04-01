@@ -1,7 +1,6 @@
 import UIKit
 import FrameworkA
 import FrameworkB
-import Alamofire
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         FrameworkA.hello()
         FrameworkB.hello()
-
         return true
     }
 

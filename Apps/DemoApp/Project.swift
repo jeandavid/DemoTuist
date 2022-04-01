@@ -27,8 +27,7 @@ let project = Project(
             resources: ["Resources/**"],
             dependencies: [
                 .project(target: "FrameworkA", path: .relativeToRoot("Modules/FrameworkA")),
-                .project(target: "FrameworkB", path: .relativeToRoot("Modules/FrameworkB")),
-                .external(name: "Alamofire")
+                .project(target: "FrameworkB", path: .relativeToRoot("Modules/FrameworkB"))
             ]
         )
     ],

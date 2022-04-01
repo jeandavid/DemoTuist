@@ -15,7 +15,10 @@ let project = Project(
             bundleId: "com.demoapp.FrameworkA",
             deploymentTarget: .iOS(targetVersion: "15.0", devices: [.iphone]),
             infoPlist: .default,
-            sources: ["Sources/**"]
+            sources: ["Sources/**"],
+            dependencies: [
+                .external(name: "Alamofire")
+            ]
         )
     ]
 )
