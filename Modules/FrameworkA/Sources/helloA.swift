@@ -1,5 +1,6 @@
 import Foundation
 import Alamofire
+import RxSwift
 
 public final class FrameworkA {
     public static func hello() {
